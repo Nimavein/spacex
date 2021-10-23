@@ -16,7 +16,7 @@ import {
 const ShipContainer = ({ shipInfo }) => {
   return (
     <ShipTile>
-      <ShipImage src={shipInfo.image} />
+      <ShipImage src={shipInfo.image} alt="Ship" />
       <ShipInfo>
         <ShipName> {shipInfo.name}</ShipName>
         <Divider />
