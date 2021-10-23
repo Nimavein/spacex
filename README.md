@@ -2,6 +2,8 @@
 
 The application allows the user to view information about SpaceX's latest launches.
 
+[Live Preview](https://peaceful-tesla-31b089.netlify.app/)
+
 ## Project Screen Shot
 
 ![Example screenshot](public\spacex-screenshot.png)
