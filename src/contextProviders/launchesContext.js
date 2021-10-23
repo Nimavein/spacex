@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import axios from "axios";
 import { useQuery } from "react-query";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
 
 const LaunchesContext = React.createContext({});
 
@@ -56,7 +58,19 @@ export const LaunchesProvider = ({ children }) => {
     }).then((response) => response.data.data.launchesPast);
   });
 
-  if (isLoading) return <span>Loading...</span>;
+  if (isLoading)
+    return (
+      <span>
+        <Loader
+          className="loader"
+          type="Puff"
+          color="#00BFFF"
+          height={200}
+          width={200}
+          timeout={3000}
+        />
+      </span>
+    );
   if (isError) return <span>{error.message}</span>;
 
   console.log(data);

@@ -12,6 +12,13 @@ const GlobalStyle = createGlobalStyle`
     color: white;
   }
 
+  .loader {
+    position: absolute;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, 150%);
+  }
+
   * {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
