@@ -11,6 +11,10 @@ export const ShipTile = styled.div`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media ${({ theme }) => theme.medias.mobile} {
+    transition: none;
+  }
 `;
 
 export const ShipImage = styled.img`
