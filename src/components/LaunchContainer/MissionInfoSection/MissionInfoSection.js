@@ -60,7 +60,7 @@ const MissionInfoSection = ({
           <RocketNameAndStatus>
             <RocketName>{rocket.rocket_name}</RocketName>
             <RocketStatus recovered={isRecovered}>
-              {isRecovered ? "Recovered" : "Unrecovered"}
+              {isRecovered ? "RECOVERED" : "UNRECOVERED"}
             </RocketStatus>
           </RocketNameAndStatus>
         </RocketInfoSection>
