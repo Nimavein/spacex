@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     position: relative;
     background: ${getColor("backgroundGradient")};
+    color: white;
   }
 
   * {
