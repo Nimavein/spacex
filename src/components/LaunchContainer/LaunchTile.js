@@ -6,7 +6,6 @@ import MissionInfoSection from "./MissionInfoSection/MissionInfoSection";
 const LaunchTile = ({ launchData }) => {
   const { mission_name, launch_date_local, launch_site, rocket, ships, links } =
     launchData;
-  console.log(launchData);
 
   return (
     <LaunchContainer>

@@ -3,7 +3,6 @@ import ShipContainer from "./ShipContainer/ShipContainer";
 import { ShipsContainer, SectionTitle } from "./ShipsSection.styles";
 
 const ShipsSection = ({ shipsInfo }) => {
-  console.log(shipsInfo);
   return (
     <>
       <SectionTitle>RESCUE SHIPS</SectionTitle>

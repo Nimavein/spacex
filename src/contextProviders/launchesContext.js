@@ -77,8 +77,6 @@ export const LaunchesProvider = ({ children }) => {
     );
   if (isError) return <span>{error.message}</span>;
 
-  console.log(data);
-
   return (
     <LaunchesContext.Provider value={data}>{children}</LaunchesContext.Provider>
   );
