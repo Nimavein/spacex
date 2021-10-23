@@ -13,7 +13,9 @@ export const ShipTile = styled.div`
   }
 
   @media ${({ theme }) => theme.medias.mobile} {
-    transition: none;
+    &:hover {
+      transform: none;
+    }
   }
 `;
 
