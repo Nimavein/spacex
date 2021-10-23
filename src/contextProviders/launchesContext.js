@@ -28,6 +28,7 @@ const QUERY = `
           core {
             status
           }
+          land_success
         }
       }
     }
