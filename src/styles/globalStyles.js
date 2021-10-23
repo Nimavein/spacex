@@ -24,14 +24,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
 .BrainhubCarousel__container{
-overflow: visible;
+  overflow: visible;
+
   .BrainhubCarousel {
     position: relative;
     overflow: visible;
 
     .BrainhubCarousel__customArrows {
-    position: absolute;
-    top: -80px;
+      position: absolute;
+      top: -80px;
 
     @media ${({ theme }) => theme.medias.mobile} {
       top: -54px;
@@ -39,6 +40,7 @@ overflow: visible;
 
     &:last-child {
       right: 0;
+      
       @media ${({ theme }) => theme.medias.mobile} {
         right: 20px;
       }
@@ -48,12 +50,8 @@ overflow: visible;
         left: 20px;
       }
     }
-  }
-  }
+  }}
 }
-  
-  
-
   
   * {
     -webkit-font-smoothing: antialiased;
