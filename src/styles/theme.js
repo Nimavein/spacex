@@ -4,6 +4,7 @@ export const color = {
   black: "#000000",
   white: "#FFFFFF",
   grey: "#868686",
+  darkGrey: "#5C5C5D",
   success: "#6FB46E",
   failure: "#BE4E35",
   backgroundGradient:

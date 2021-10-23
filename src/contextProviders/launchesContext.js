@@ -14,6 +14,7 @@ const QUERY = `
     launch_date_local
     launch_site {
       site_name_long
+      site_name
     }
     links {
       article_link
@@ -45,6 +46,7 @@ const QUERY = `
     }
   }
 }
+
 `;
 
 export const LaunchesProvider = ({ children }) => {

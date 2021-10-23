@@ -1,9 +1,17 @@
 import React from "react";
-import { SectionContainer, SpacexLogo } from "./LaunchesContainer.styles";
+import {
+  SectionContainer,
+  SpacexLogo,
+  LeftArrow,
+  RightArrow,
+  LeftDisabledArrow,
+  RightDisabledArrow,
+  Divider,
+} from "./LaunchesContainer.styles";
 import Carousel, { arrowsPlugin } from "@brainhubeu/react-carousel";
-import Icon from "react-fa";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { useLaunchesData } from "../../contextProviders/launchesContext";
+import LaunchTile from "../LaunchContainer/LaunchTile";
 
 const LaunchesContainer = () => {
   const launches = useLaunchesData();
@@ -11,31 +19,20 @@ const LaunchesContainer = () => {
   return (
     <SectionContainer>
       <SpacexLogo src="/spacex-logo.svg" alt="spacex-logo" />
+      <Divider />
 
       <Carousel
         plugins={[
           {
             resolve: arrowsPlugin,
             options: {
-              arrowLeft: (
-                <button>
-                  <Icon name="angle-double-left" />
-                </button>
-              ),
+              arrowLeft: <LeftArrow src="/left-arrow.svg" alt="" />,
               arrowLeftDisabled: (
-                <button>
-                  <Icon name="angle-left" />
-                </button>
+                <LeftDisabledArrow src="/disabled-left-arrow.svg" alt="" />
               ),
-              arrowRight: (
-                <button>
-                  <Icon name="angle-double-right" />
-                </button>
-              ),
+              arrowRight: <RightArrow src="/right-arrow.svg" alt="" />,
               arrowRightDisabled: (
-                <button>
-                  <Icon name="angle-right" />
-                </button>
+                <RightDisabledArrow src="/disabled-right-arrow.svg" alt="" />
               ),
               addArrowClickHandler: true,
             },
@@ -43,7 +40,7 @@ const LaunchesContainer = () => {
         ]}
       >
         {launches.map((launch) => (
-          <p key={launch.mission_name}>{launch.mission_name}</p>
+          <LaunchTile key={launch.mission_name} launchData={launch} />
         ))}
       </Carousel>
     </SectionContainer>
