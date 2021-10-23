@@ -15,7 +15,6 @@ import LaunchTile from "../LaunchContainer/LaunchTile";
 
 const LaunchesContainer = () => {
   const launches = useLaunchesData();
-  console.log(launches);
   return (
     <SectionContainer>
       <SpacexLogo src="/spacex-logo.svg" alt="spacex-logo" />
