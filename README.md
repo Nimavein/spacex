@@ -4,7 +4,7 @@ The application allows the user to view information about SpaceX's latest launch
 
 ## Project Screen Shot
 
-![Example screenshot](public\spacex-screenshot.png?raw=true)
+![Example screenshot](public\spacex-screenshot.png)
 
 ## Installation and Setup Instructions
 
@@ -12,12 +12,18 @@ Clone down this repository. You will need node and npm installed globally on you
 
 Installation:
 
+```
 npm install
+```
 
 To Start Server:
 
+```
 npm start
+```
 
 To Visit App:
 
+```
 localhost:3000
+```
