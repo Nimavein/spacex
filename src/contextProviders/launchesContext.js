@@ -26,26 +26,27 @@ const QUERY = `
         cores {
           flight
           core {
-            reuse_count
             status
           }
-        }
-      }
-      second_stage {
-        payloads {
-          payload_type
-          payload_mass_kg
-          payload_mass_lbs
         }
       }
     }
     ships {
       name
-      home_port
       image
+      status
+      weight_kg
+      home_port
+    }
+  }
+  missionsResult {
+    result {
+      totalCount
     }
   }
 }
+
+
 
 `;
 

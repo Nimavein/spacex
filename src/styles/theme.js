@@ -5,6 +5,7 @@ export const color = {
   white: "#FFFFFF",
   grey: "#868686",
   darkGrey: "#5C5C5D",
+  lightGrey: "#E8E8E8",
   success: "#6FB46E",
   failure: "#BE4E35",
   backgroundGradient:

@@ -26,13 +26,21 @@ const LaunchesContainer = () => {
           {
             resolve: arrowsPlugin,
             options: {
-              arrowLeft: <LeftArrow src="/left-arrow.svg" alt="" />,
+              arrowLeft: <LeftArrow src="/left-arrow.svg" alt="left-arrow" />,
               arrowLeftDisabled: (
-                <LeftDisabledArrow src="/disabled-left-arrow.svg" alt="" />
+                <LeftDisabledArrow
+                  src="/disabled-left-arrow.svg"
+                  alt="left-arrow"
+                />
               ),
-              arrowRight: <RightArrow src="/right-arrow.svg" alt="" />,
+              arrowRight: (
+                <RightArrow src="/right-arrow.svg" alt="right-arrow" />
+              ),
               arrowRightDisabled: (
-                <RightDisabledArrow src="/disabled-right-arrow.svg" alt="" />
+                <RightDisabledArrow
+                  src="/disabled-right-arrow.svg"
+                  alt="right-arrow"
+                />
               ),
               addArrowClickHandler: true,
             },

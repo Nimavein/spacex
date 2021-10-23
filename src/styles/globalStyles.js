@@ -19,6 +19,30 @@ const GlobalStyle = createGlobalStyle`
     transform: translate(-50%, 150%);
   }
 
+  .BrainhubCarouselItem {
+    align-items: flex-start;
+  }
+
+.BrainhubCarousel__container{
+overflow: visible;
+  .BrainhubCarousel {
+    position: relative;
+    overflow: visible;
+
+    .BrainhubCarousel__customArrows {
+    position: absolute;
+    top: -80px;
+
+    &:last-child {
+      right: 0;
+    }
+  }
+  }
+}
+  
+  
+
+  
   * {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;

@@ -5,7 +5,6 @@ import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 export const LaunchContainer = styled.section`
   margin-top: 36px;
   width: 100%;
-  padding: 0 40px 0 40px;
 `;
 
 export const LaunchBasicInfo = styled.div`

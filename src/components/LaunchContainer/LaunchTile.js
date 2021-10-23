@@ -20,9 +20,10 @@ import {
 } from "./LaunchTile.styles";
 
 import { Divider } from "../LaunchesContainer/LaunchesContainer.styles";
+import ShipsSection from "./ShipsSection/ShipsSection";
 
 const LaunchTile = ({ launchData }) => {
-  const { mission_name, launch_date_local, launch_site, rocket, ships } =
+  const { mission_name, launch_date_local, launch_site, rocket, ships, links } =
     launchData;
   console.log(launchData);
 
@@ -39,7 +40,9 @@ const LaunchTile = ({ launchData }) => {
               <RocketStatus recovered>Recovered</RocketStatus>
             </RocketNameAndStatus>
           </RocketInfoSection>
-          <LearnMoreButton>LEARN MORE</LearnMoreButton>
+          <a href={links.article_link || links.video_link}>
+            <LearnMoreButton>LEARN MORE</LearnMoreButton>
+          </a>
         </LeftSection>
         <RightSection>
           <LaunchDateText>LAUNCH DATE</LaunchDateText>
@@ -54,6 +57,7 @@ const LaunchTile = ({ launchData }) => {
         </RightSection>
       </LaunchBasicInfo>
       <Divider />
+      <ShipsSection shipsInfo={ships} />
     </LaunchContainer>
   );
 };
