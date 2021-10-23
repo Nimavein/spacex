@@ -6,7 +6,7 @@ The application allows the user to view information about SpaceX's latest launch
 
 ## Project Screen Shot
 
-[<img alt="Example screenshot" src="public\spacex-screenshot.png"/>]
+<img alt="Example screenshot" src="public\spacex-screenshot.png"/>
 
 ## Installation and Setup Instructions
 
