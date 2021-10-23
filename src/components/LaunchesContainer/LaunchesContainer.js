@@ -3,8 +3,10 @@ import { SectionContainer, SpacexLogo } from "./LaunchesContainer.styles";
 import Carousel, { arrowsPlugin } from "@brainhubeu/react-carousel";
 import Icon from "react-fa";
 import "@brainhubeu/react-carousel/lib/style.css";
+import { useLaunchesData } from "../../contextProviders/launchesContext";
 
-const LaunchesContainer = ({ launches }) => {
+const LaunchesContainer = () => {
+  const launches = useLaunchesData();
   console.log(launches);
   return (
     <SectionContainer>
