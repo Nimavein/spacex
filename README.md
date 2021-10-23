@@ -23,3 +23,8 @@ To Start Server:
 To Visit App:
 
 `localhost:3000`
+
+## Technology Stack
+
+- ReactJS
+- Styled Components
