@@ -7,6 +7,10 @@ export const SectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media ${({ theme }) => theme.medias.mobile} {
+    margin-top: 30px;
+  }
 `;
 
 export const Divider = styled.hr`
@@ -14,9 +18,19 @@ export const Divider = styled.hr`
   width: 100%;
   height: 1px;
   margin-top: 44px;
+
+  @media ${({ theme }) => theme.medias.mobile} {
+    margin-top: 30px;
+    width: 100vw;
+  }
 `;
 
-export const SpacexLogo = styled.img``;
+export const SpacexLogo = styled.img`
+  @media ${({ theme }) => theme.medias.mobile} {
+    height: 25px;
+    width: 200px;
+  }
+`;
 
 export const LeftArrow = styled.img`
   cursor: pointer;

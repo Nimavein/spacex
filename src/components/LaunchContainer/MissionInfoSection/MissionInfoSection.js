@@ -17,6 +17,7 @@ import {
   LaunchSiteText,
   LearnMoreButton,
   LightTooltip,
+  LaunchDateMobile,
 } from "./MissionInfoSection.styles";
 
 const MissionInfoSection = ({
@@ -26,6 +27,28 @@ const MissionInfoSection = ({
   launch_date_local,
   launch_site,
 }) => {
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  let shortenedDate = launch_date_local.split("T")[0];
+  let monthNumber = parseInt(shortenedDate.split("-")[1]);
+  let day = parseInt(shortenedDate.split("-")[2]);
+  let year = parseInt(shortenedDate.split("-")[0]);
+  let monthName = months[monthNumber - 1];
+  let fullDate = `${day} ${monthName} ${year}`;
+
   const isRecovered = rocket.first_stage.cores[0].land_success === true;
   return (
     <LaunchBasicInfo>
@@ -47,7 +70,10 @@ const MissionInfoSection = ({
       </LeftSection>
       <RightSection>
         <LaunchDateText>LAUNCH DATE</LaunchDateText>
-        <LaunchDate>{launch_date_local}</LaunchDate>
+        <LaunchDate>{fullDate}</LaunchDate>
+        <LaunchDateMobile>
+          {launch_date_local.replace("T", " ")}
+        </LaunchDateMobile>
         <LaunchSiteText>LAUNCH SITE</LaunchSiteText>
         <LightTooltip
           title={launch_site.site_name_long}

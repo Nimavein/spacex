@@ -1,7 +1,5 @@
 import React from "react";
-import { LaunchContainer } from "./LaunchTile.styles";
-
-import { Divider } from "../LaunchesContainer/LaunchesContainer.styles";
+import { LaunchContainer, Divider } from "./LaunchTile.styles";
 import ShipsSection from "./ShipsSection/ShipsSection";
 import MissionInfoSection from "./MissionInfoSection/MissionInfoSection";
 

@@ -33,8 +33,20 @@ overflow: visible;
     position: absolute;
     top: -80px;
 
+    @media ${({ theme }) => theme.medias.mobile} {
+      top: -54px;
+    }
+
     &:last-child {
       right: 0;
+      @media ${({ theme }) => theme.medias.mobile} {
+        right: 20px;
+      }
+    }
+    &:first-child {
+      @media ${({ theme }) => theme.medias.mobile} {
+        left: 20px;
+      }
     }
   }
   }

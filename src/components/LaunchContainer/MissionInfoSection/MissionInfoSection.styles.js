@@ -6,6 +6,10 @@ export const LaunchBasicInfo = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media ${({ theme }) => theme.medias.mobile} {
+    flex-direction: column;
+  }
 `;
 
 export const LeftSection = styled.div`
@@ -23,17 +27,32 @@ export const MissionText = styled.p`
   font-size: 16px;
   line-height: 19px;
   margin-bottom: 12px;
+
+  @media ${({ theme }) => theme.medias.mobile} {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 6px;
+  }
 `;
 export const MissionName = styled.p`
   color: ${getColor("white")};
   font-weight: bold;
   font-size: 42px;
   line-height: 49px;
+
+  @media ${({ theme }) => theme.medias.mobile} {
+    font-size: 34px;
+    line-height: 40px;
+  }
 `;
 
 export const RocketInfoSection = styled.div``;
 export const RocketText = styled(MissionText)`
   margin: 23px 0 8px 0;
+
+  @media ${({ theme }) => theme.medias.mobile} {
+    margin: 20px 0 7px 0;
+  }
 `;
 export const RocketNameAndStatus = styled.div`
   display: flex;
@@ -57,21 +76,51 @@ export const RocketName = styled.p`
   font-size: 18px;
   line-height: 21px;
   color: ${getColor("white")};
+
+  @media ${({ theme }) => theme.medias.mobile} {
+    font-size: 16px;
+    line-height: 19px;
+  }
 `;
 
 export const LaunchDateText = styled(MissionText)`
   text-align: right;
   margin-bottom: 8px;
+
+  @media ${({ theme }) => theme.medias.mobile} {
+    text-align: left;
+  }
 `;
 export const LaunchDate = styled(RocketName)`
   text-align: right;
+
+  @media ${({ theme }) => theme.medias.mobile} {
+    display: none;
+  }
 `;
+
+export const LaunchDateMobile = styled(RocketName)`
+  display: none;
+  @media ${({ theme }) => theme.medias.mobile} {
+    display: block;
+  }
+`;
+
 export const LaunchSiteText = styled(MissionText)`
   margin: 23px 0 8px 0;
   text-align: right;
+
+  @media ${({ theme }) => theme.medias.mobile} {
+    text-align: left;
+    margin: 16px 0 8px 0;
+  }
 `;
 export const LaunchSite = styled(RocketName)`
   text-align: right;
+
+  @media ${({ theme }) => theme.medias.mobile} {
+    text-align: left;
+  }
 `;
 
 export const LearnMoreButton = styled.button`
@@ -86,6 +135,11 @@ export const LearnMoreButton = styled.button`
 
   &:hover {
     opacity: 0.6;
+  }
+
+  @media ${({ theme }) => theme.medias.mobile} {
+    margin: 30px 0 28px 0;
+    width: 100%;
   }
 `;
 
