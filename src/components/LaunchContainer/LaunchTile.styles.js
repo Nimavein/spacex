@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { getColor } from "../../styles/utils";
+import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 
 export const LaunchContainer = styled.section`
   margin-top: 36px;
@@ -80,6 +81,7 @@ export const LaunchSite = styled(RocketName)`
 `;
 
 export const LearnMoreButton = styled.button`
+  width: fit-content;
   padding: 19px 37px;
   border: 2px solid ${getColor("white")};
   background: transparent;
@@ -92,3 +94,13 @@ export const LearnMoreButton = styled.button`
     opacity: 0.6;
   }
 `;
+
+export const LightTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: "white",
+    color: "rgba(0, 0, 0, 0.87)",
+    fontSize: 14,
+  },
+}));

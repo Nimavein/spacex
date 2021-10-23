@@ -16,14 +16,16 @@ import {
   LaunchSite,
   LaunchSiteText,
   LearnMoreButton,
+  LightTooltip,
 } from "./LaunchTile.styles";
 
 import { Divider } from "../LaunchesContainer/LaunchesContainer.styles";
 
 const LaunchTile = ({ launchData }) => {
-  const { mission_name, launch_date_local, launch_site, links, rocket, ships } =
+  const { mission_name, launch_date_local, launch_site, rocket, ships } =
     launchData;
   console.log(launchData);
+
   return (
     <LaunchContainer>
       <LaunchBasicInfo>
@@ -43,7 +45,12 @@ const LaunchTile = ({ launchData }) => {
           <LaunchDateText>LAUNCH DATE</LaunchDateText>
           <LaunchDate>{launch_date_local}</LaunchDate>
           <LaunchSiteText>LAUNCH SITE</LaunchSiteText>
-          <LaunchSite>{launch_site.site_name}</LaunchSite>
+          <LightTooltip
+            title={launch_site.site_name_long}
+            placement="bottom-start"
+          >
+            <LaunchSite>{launch_site.site_name}</LaunchSite>
+          </LightTooltip>
         </RightSection>
       </LaunchBasicInfo>
       <Divider />
